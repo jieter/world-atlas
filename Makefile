@@ -13,6 +13,9 @@ all: node_modules $(addprefix topo/,$(addsuffix .json,$(COLLECTIONS)))
 node_modules:
 	npm install
 
+clean:
+	rm -rf zip geo shp topo node_modules
+
 .SECONDARY:
 
 zip/ne_10m_land.zip:
